@@ -36,7 +36,11 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-	req.app.db.get("books").remove({ id: req.params.id }).write();
+	if (req.params.id.includes('demo')) {
+		console.log('Demo!');
+	} else {
+		req.app.db.get("books").remove({ id: req.params.id }).write();
+	}
   res.sendStatus(200);
 });
 
