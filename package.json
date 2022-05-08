@@ -2,6 +2,9 @@
   "name": "api-books",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "author": "abr-ya",
   "license": "MIT",
   "dependencies": {
